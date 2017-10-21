@@ -1,0 +1,88 @@
+# Project: NossoCad
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = AmpOp.o Capacitor.o Chave.o Circuito.o Diodo.o Elemento.o FonteDeCorrente.o FonteDeCorrenteControladaACorrente.o FonteDeCorrenteControladaATensao.o FonteDeCorrenteSenoidal.o FonteDePulsos.o FonteDePulsosDeCorrente.o FonteDeTensao.o FonteDeTensaoControladaACorrente.o FonteDeTensaoControladaATensao.o FonteDeTensaoSenoidal.o funcoesAuxiliares.o Indutor.o main.o Resistor.o Transformador.o
+LINKOBJ  = AmpOp.o Capacitor.o Chave.o Circuito.o Diodo.o Elemento.o FonteDeCorrente.o FonteDeCorrenteControladaACorrente.o FonteDeCorrenteControladaATensao.o FonteDeCorrenteSenoidal.o FonteDePulsos.o FonteDePulsosDeCorrente.o FonteDeTensao.o FonteDeTensaoControladaACorrente.o FonteDeTensaoControladaATensao.o FonteDeTensaoSenoidal.o funcoesAuxiliares.o Indutor.o main.o Resistor.o Transformador.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = NossoCad.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+AmpOp.o: AmpOp.cpp
+	$(CPP) -c AmpOp.cpp -o AmpOp.o $(CXXFLAGS)
+
+Capacitor.o: Capacitor.cpp
+	$(CPP) -c Capacitor.cpp -o Capacitor.o $(CXXFLAGS)
+
+Chave.o: Chave.cpp
+	$(CPP) -c Chave.cpp -o Chave.o $(CXXFLAGS)
+
+Circuito.o: Circuito.cpp
+	$(CPP) -c Circuito.cpp -o Circuito.o $(CXXFLAGS)
+
+Diodo.o: Diodo.cpp
+	$(CPP) -c Diodo.cpp -o Diodo.o $(CXXFLAGS)
+
+Elemento.o: Elemento.cpp
+	$(CPP) -c Elemento.cpp -o Elemento.o $(CXXFLAGS)
+
+FonteDeCorrente.o: FonteDeCorrente.cpp
+	$(CPP) -c FonteDeCorrente.cpp -o FonteDeCorrente.o $(CXXFLAGS)
+
+FonteDeCorrenteControladaACorrente.o: FonteDeCorrenteControladaACorrente.cpp
+	$(CPP) -c FonteDeCorrenteControladaACorrente.cpp -o FonteDeCorrenteControladaACorrente.o $(CXXFLAGS)
+
+FonteDeCorrenteControladaATensao.o: FonteDeCorrenteControladaATensao.cpp
+	$(CPP) -c FonteDeCorrenteControladaATensao.cpp -o FonteDeCorrenteControladaATensao.o $(CXXFLAGS)
+
+FonteDeCorrenteSenoidal.o: FonteDeCorrenteSenoidal.cpp
+	$(CPP) -c FonteDeCorrenteSenoidal.cpp -o FonteDeCorrenteSenoidal.o $(CXXFLAGS)
+
+FonteDePulsos.o: FonteDePulsos.cpp
+	$(CPP) -c FonteDePulsos.cpp -o FonteDePulsos.o $(CXXFLAGS)
+
+FonteDePulsosDeCorrente.o: FonteDePulsosDeCorrente.cpp
+	$(CPP) -c FonteDePulsosDeCorrente.cpp -o FonteDePulsosDeCorrente.o $(CXXFLAGS)
+
+FonteDeTensao.o: FonteDeTensao.cpp
+	$(CPP) -c FonteDeTensao.cpp -o FonteDeTensao.o $(CXXFLAGS)
+
+FonteDeTensaoControladaACorrente.o: FonteDeTensaoControladaACorrente.cpp
+	$(CPP) -c FonteDeTensaoControladaACorrente.cpp -o FonteDeTensaoControladaACorrente.o $(CXXFLAGS)
+
+FonteDeTensaoControladaATensao.o: FonteDeTensaoControladaATensao.cpp
+	$(CPP) -c FonteDeTensaoControladaATensao.cpp -o FonteDeTensaoControladaATensao.o $(CXXFLAGS)
+
+FonteDeTensaoSenoidal.o: FonteDeTensaoSenoidal.cpp
+	$(CPP) -c FonteDeTensaoSenoidal.cpp -o FonteDeTensaoSenoidal.o $(CXXFLAGS)
+
+funcoesAuxiliares.o: funcoesAuxiliares.cpp
+	$(CPP) -c funcoesAuxiliares.cpp -o funcoesAuxiliares.o $(CXXFLAGS)
+
+Indutor.o: Indutor.cpp
+	$(CPP) -c Indutor.cpp -o Indutor.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Resistor.o: Resistor.cpp
+	$(CPP) -c Resistor.cpp -o Resistor.o $(CXXFLAGS)
+
+Transformador.o: Transformador.cpp
+	$(CPP) -c Transformador.cpp -o Transformador.o $(CXXFLAGS)
